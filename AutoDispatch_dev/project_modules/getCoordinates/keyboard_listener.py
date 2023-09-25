@@ -3,7 +3,7 @@ import pyautogui
 # 获取键盘事件
 from pynput import keyboard
 
-from project_modules.getCoordinates.coordinates import *
+from .coordinates import coordinates_dict, update_coordinates
 
 # 创建键盘监听器
 keyboard_listener = None
@@ -19,7 +19,7 @@ def on_key_press(key):
     if key_name == 'r':
         x, y = pyautogui.position()
         print(f"Mouse position({key_name}): x={x}, y={y}")
-        update_coordinates("first", x, y)
+        update_coordinates("订单", x, y)
     elif key_name == 'Key.esc':
         keyboard_listener.stop()  # 停止监听器
 
