@@ -31,11 +31,12 @@ def start_keyboard_listener():
     # 启动监听器
     keyboard_listener.start()
     print("请按提示依次获取鼠标位置\n按\'ESC\'键退出")
-
-    print("1.请将鼠标移动到\'订单\'按钮并按下\'r\'键")
-
     # 保持监听器活动，直到退出监听
     keyboard_listener.join()
+
+    first_coordinates = coordinates_dict.get('first', None)
+    if first_coordinates is not None and len(first_coordinates) == 0:
+        print("1.请将鼠标移动到\'订单\'按钮并按下\'r\'键")
 
     # 停止监听器
     keyboard_listener.stop()
