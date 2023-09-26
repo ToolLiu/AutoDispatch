@@ -19,16 +19,19 @@ def on_key_press(key):
         print(key_name)
 
     if key_name == '1':
-        update_coordinates("订单", x, y)
-        print("2.请将鼠标移动到\'抢单\'按钮并按下\'2\'键")
+        update_coordinates("派发", x, y)
+        print("2.请将鼠标移动到\'运往地\'并按下\'2\'键")
     elif key_name == '2':
-        update_coordinates("抢单", x, y)
-        print("3.请将鼠标移动到搜索框并按下\'3\'键")
+        update_coordinates("运往地", x, y)
+        print("3.请将鼠标移动到销售用途并按下\'3\'键")
     elif key_name == '3':
-        update_coordinates("搜索", x, y)
-        print("4.请将鼠标移动到\'查询\'键并按下\'4\'键")
+        update_coordinates("销售用途", x, y)
+        print("4.请将鼠标移动到\'确认销售用途\'键并按下\'4\'键")
     elif key_name == '4':
-        update_coordinates("查询", x, y)
+        update_coordinates("确认销售用途", x, y)
+        print("4.请将鼠标移动到\'确认派发\'键并按下\'5\'键")
+    elif key_name == '5':
+        update_coordinates("确认派发", x, y)
         print("字典录入完成！清按ESC退出并执行程序。")
     elif key_name == 'Key.esc':
         keyboard_listener.stop()  # 停止监听器
@@ -41,7 +44,7 @@ def start_keyboard_listener():
     # 启动监听器
     keyboard_listener.start()
     print("请按提示依次获取鼠标位置\n按\'ESC\'键退出")
-    print("1.请将鼠标移动到\'订单\'按钮并按下\'1\'键")
+    print("1.请将鼠标移动到\'派发\'按钮并按下\'1\'键")
     # 保持监听器活动，直到退出监听
     keyboard_listener.join()
 
