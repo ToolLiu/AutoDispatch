@@ -32,8 +32,8 @@ def on_key_press(key):
         print("4.请将鼠标移动到\'确认派发\'键并按下\'5\'键")
     elif key_name == '5':
         update_coordinates("确认派发", x, y)
-        print("字典录入完成！清按ESC退出并执行程序。")
-    elif key_name == 'Key.esc':
+        print("字典录入完成！清按回车键执行程序。")
+    elif key_name == 'Key.enter':
         keyboard_listener.stop()  # 停止监听器
 
 def start_keyboard_listener():
@@ -43,7 +43,7 @@ def start_keyboard_listener():
     keyboard_listener = keyboard.Listener(on_press=on_key_press)
     # 启动监听器
     keyboard_listener.start()
-    print("请按提示依次获取鼠标位置\n按\'ESC\'键退出")
+    print("请按提示依次获取鼠标位置\n按\'回车\'键退出")
     print("1.请将鼠标移动到\'派发\'按钮并按下\'1\'键")
     # 保持监听器活动，直到退出监听
     keyboard_listener.join()
