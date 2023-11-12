@@ -2,7 +2,7 @@
 
 from project_modules.initial_data.keyboard_listener import start_keyboard_listener
 from project_modules.auto_click.auto_click import start_auto_click
-from project_modules.exit_script.exit_script import if_exit_listener
+# from project_modules.exit_script.exit_script import if_exit_listener
 
 
 start_keyboard_listener()
